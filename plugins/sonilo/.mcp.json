@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sonilo_platform": {
+      "type": "http",
+      "url": "https://api.sonilo.com/mcp"
+    }
+  }
+}

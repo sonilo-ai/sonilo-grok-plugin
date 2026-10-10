@@ -1,0 +1,18 @@
+{
+  "name": "sonilo",
+  "description": "Sonilo plugin for Grok Build.",
+  "owner": {
+    "name": "Sonilo"
+  },
+  "plugins": [
+    {
+      "name": "sonilo",
+      "description": "Generate licensed music, sound effects, mixed videos, translated subtitles, and dubbing with Sonilo Platform. Works from text, a video URL, or a local file.",
+      "category": "creativity",
+      "source": "./plugins/sonilo",
+      "homepage": "https://platform.sonilo.com",
+      "keywords": ["sonilo", "sonilo music", "sonilo sfx", "sonilo dubbing", "sonilo mcp"],
+      "domains": ["sonilo.com", "platform.sonilo.com", "api.sonilo.com"]
+    }
+  ]
+}

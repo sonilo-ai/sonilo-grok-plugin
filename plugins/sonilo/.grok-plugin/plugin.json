@@ -1,0 +1,15 @@
+{
+  "name": "sonilo",
+  "version": "1.0.0",
+  "description": "Generate licensed music, sound effects, mixed videos, translated subtitles, and dubbing with Sonilo Platform via the hosted MCP server at api.sonilo.com. Works from text, a video URL, or a local file. Sign in with a Sonilo Platform account on first connect.",
+  "author": {
+    "name": "Sonilo",
+    "email": "support@sonilo.com",
+    "url": "https://platform.sonilo.com"
+  },
+  "homepage": "https://platform.sonilo.com",
+  "repository": "https://github.com/sonilo-ai/sonilo-grok-plugin",
+  "license": "MIT",
+  "keywords": ["sonilo", "sonilo music", "sonilo sfx", "sonilo dubbing", "sonilo mcp"],
+  "logo": "assets/logo.png"
+}

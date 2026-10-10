@@ -1,0 +1,36 @@
+name: Plugin release checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: plugin-release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Validate plugin release invariants
+        run: python3 scripts/check_release.py
+
+      - name: Validate JSON files
+        run: |
+          python3 -m json.tool plugins/sonilo/.grok-plugin/plugin.json >/dev/null
+          python3 -m json.tool plugins/sonilo/.mcp.json >/dev/null
+          python3 -m json.tool .grok-plugin/marketplace.json >/dev/null
