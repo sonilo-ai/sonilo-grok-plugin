@@ -23,17 +23,18 @@ sign in with your Sonilo Platform account, no key to copy or paste.
 ## Install
 
 ```bash
-grok plugin install sonilo-ai/sonilo-grok-plugin --trust
+grok plugin install 'sonilo-ai/sonilo-grok-plugin#plugins/sonilo' --trust
 ```
 
 ### Local development installation
 
 ```bash
 git clone https://github.com/sonilo-ai/sonilo-grok-plugin.git
-grok --plugin-dir ./sonilo-grok-plugin/plugins/sonilo
+grok plugin install "$PWD/sonilo-grok-plugin#plugins/sonilo" --trust
 ```
 
-`grok inspect` shows the loaded skill and MCP server.
+`grok plugin validate ./sonilo-grok-plugin/plugins/sonilo` checks the manifest,
+and `grok inspect` shows the loaded skill and MCP server.
 
 ## Authorize
 
